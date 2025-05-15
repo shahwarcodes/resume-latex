@@ -1,0 +1,391 @@
+\documentclass[theme]{cv_einstein}
+% Read cv_einstein.cls to look at all available options
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage{xcolor}
+% Caution: pargin=0cm means the CV won't print well.
+% Using this template means that you accept it.
+\usepackage[a4paper, portrait, margin=0cm]{geometry}
+\usepackage{fontawesome}
+\usepackage{array} % For better tabl formatting. See: https://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
+\usepackage{enumitem} % See https://tex.stackexchange.com/a/199073/304372
+\usepackage[pdftex, pdfauthor={Shahwar Saleem}, pdftitle={Shahwar Saleem, Public CV}, pdfsubject={Shahwar Saleem Resume},
+pdfkeywords={Software Engineering, Machine Learning, MLOps, Data Management}]
+{hyperref}
+
+
+
+
+\begin{document}
+%------------------------------------------------------------------ Variables
+% The left column contains the goals, summary, skills, etc.
+% We define its width w.r.t. the width of the whole page
+\newcommand{\lratio}{0.31}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{\lratio\textwidth}
+% The right column contains the main content, i.e. work experience, education, etc.
+\newcommand{\rratio}{0.7}
+\newlength{\rightcolwidth}
+\setlength{\rightcolwidth}{\rratio\textwidth}
+% Space to leave below a section, above the title of the following section
+\newlength{\sectionspace}
+\setlength{\sectionspace}{1cm}
+% Space to leave below an item, above the following item
+\newlength{\itemspace}
+\setlength{\itemspace}{10pt}
+% fbox stuff. You won't need to adjust these. You can safely ignore.
+\setlength{\fboxrule}{0pt}
+\setlength{\fboxsep}{4pt}
+% Shortcuts to have table columns with fixed width AND positionning: [L]eft, [C]enter, [R]ight
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Removes the (ugly) box around html links
+\hypersetup{hidelinks}
+%------------------------------------------------------------------
+\title{Shahwar Saleem}
+\author{\LaTeX{} Shahwar Saleem}
+\date{1955}
+
+
+
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %                       UPPER PART
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    %                       HEADER
+    %-------------------------------------------------------------
+    % Usage: \header{background-color}{name-color}{name}{title-color}{title}{summary-color}{summary}{portrait.jpg}{email@example.com}{phone}{country-flag.png}{city}{linkedin-id}
+    \header
+    {Shahwar Saleem}
+    {Software Engineer $\cdot$ Machine Learning $\cdot$ Data Management}
+    {
+        I'm a Machine Learning Engineer with a degree from the University of Waterloo, focused on building and productionizing ML models at scale. I specialize in developing robust ML and data platforms, and I'm passionate about streamlining workflows to bring machine learning solutions efficiently into production environments. % Do NOT end with a newline
+    }
+    {assets/black_dp.png}
+
+    %-------------------------------------------------------------
+    %                       CONTACT BAND
+    %-------------------------------------------------------------
+    % Usage: \contactband{background-color}{text-color}{email}{phone-number}{country-flag}{city}{linkedin-id}
+    \contactband{saleemshahwar@gmail.com}{+1.226.220.7123}{assets/flag-canada.png}{Toronto}{shahwar-saleem}{shahwar9}
+
+    \vspace{\headerheight} % The header is only a TIKZ image. We must give it space to appear and not be hidden by what comes next.
+
+    \setlength{\columnsep}{0px}
+    \columnratio{\lratio}
+    \begin{paracol}{2}
+        \paracolbackgroundoptions
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       LEFT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{leftcolumn*} \noindent \footnotesize
+            {\color{white}
+            %-------------------------------------------------------------
+            %                       GOALS
+            %-------------------------------------------------------------
+            \heading{\faCompass}{Goals}
+            \begin{minipage}[r]{\leftcolwidth}
+                \goal{\faFlask}{Gain deeper insights into the unique requirements of machine learning workflows across diverse domains.}
+                \vspace{\itemspace}\\
+                \goal{\faExchange}{Continue refining system design skills and strive for technical excellence through hands-on experience and continuous learning.}
+                \vspace{\itemspace}\\
+                \goal{\faLink}{Aspire to lead ML and data teams by leveraging system design expertise, practical experience, and a strong focus on cultivating a collaborative, learning-driven culture to build scalable and impactful platforms.}
+                \vspace{\itemspace}\\
+               % \goal{\faHourglassHalf}{I like having time to think my ideas through carefully, challenging common sense as well as my own assumptions.}
+            \end{minipage}
+
+            %-------------------------------------------------------------
+            %                       SKILLS
+            %-------------------------------------------------------------
+            \vspace{1.75\sectionspace}
+            \heading{\faPuzzlePiece}{Skills}
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{c}
+                    \hspace{-3pt}\bubblediagram{
+                    % Usage: \bubblediagram{list of comma-separated text items}
+                    % The first item will be written in the main bubble, at the center of the diagram
+                    % All other items will be written in their own satellite bubble
+                        % Main bubble
+                        {\textbf{Software} \\ \textbf{Engineering} \\ \textbf{\&} \\ \textbf{Machine}  \\ \textbf{Learning}},
+                        % Satellites
+                        Team Work,
+                        ML Platforms,
+                        Data\\Management,
+                        Agile\\and\\Scrum, 
+                        Software\\Architecture}
+                \end{tabular}
+            \end{minipage}
+        }
+        \vspace{0.75\sectionspace}
+        
+            %-------------------------------------------------------------
+            %                       TECH
+            %-------------------------------------------------------------
+            \heading{\faWrench}{Tech}
+         {\color{white}
+            \begin{minipage}[c]{\leftcolwidth}
+                \begin{tabular}{r|l}
+                    Python & \pictofraction{4}\\[0.3em]
+                    Git & \pictofraction{4}\\[0.3em]
+                    Databricks & \pictofraction{4}\\[0.3em]
+                    CICD & \pictofraction{4}\\[0.3em]
+                    Spark & \pictofraction{3}\\[0.3em]
+                    AWS & \pictofraction{3}\\[0.3em]
+                    Flyte & \pictofraction{3}\\[0.3em]
+                    Kubernetes & \pictofraction{3}\\[0.3em]
+                    Kubeflow & \pictofraction{2}\\[0.3em]
+                    Airflow & \pictofraction{2}\\[0.3em]
+                    Terraform & \pictofraction{2}\\[0.3em]
+                    Cloudformation & \pictofraction{2}\\[0.3em]
+                    Golang & \pictofraction{1}
+                \end{tabular}
+            \end{minipage}
+        }
+        \end{leftcolumn*}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{rightcolumn}\noindent \small
+            %-------------------------------------------------------------
+            %                       WORK EXPERIENCE
+            %-------------------------------------------------------------
+            \hspace{-2.4pt}\heading{\faSuitcase}{Work Experience}
+            % RIPPLE
+            \cvevent{Nov 2022}{Present}{Senior Software Engineer | MLOps}{Ripple}{Toronto, ON, Canada}{assets/logo-ripple.png}
+            {At Ripple, I led the migration of our team’s Databricks workspace from GCP to AWS, successfully transferring dozens of machine learning models and hundreds of historical experiment records. I designed and built a reusable, Python-based ML platform package for Databricks, now adopted across the organization to streamline model development and deployment. I also defined the versioning strategy and implemented a continuous delivery pipeline for the package. In addition, I pioneered and now maintain generalized data pipelines that support multiple teams, enabling scalable and consistent data workflows. Beyond technical contributions, I actively foster a strong team culture by facilitating design reviews and leading agile ceremonies such as retrospectives, sprint planning, and backlog grooming.}
+            \vspace{\itemspace}\\
+            % ARCTIC WOLF
+            \cvevent{Jan 2022}{Nov 2022}{Software Engineer | Machine Learning }{Arctic Wolf}{Waterloo, ON, Canada}{assets/logo-aw.png}
+            {Led requirements gathering and design sessions for the ML platform at Arctic Wolf, with a strong focus on the company’s unique data analytics-driven use cases. Designed illustrative examples and implemented two proof-of-concept (PoC) projects to evaluate and benchmark tools within the ML platform ecosystem. Spearheaded the deployment of Kubeflow and Flyte in the development environment as part of the evaluation process for scalable and production-ready ML orchestration solutions.
+}
+            \vspace{\itemspace}\\
+            % BOREALIS AI
+            \cvevent{Jul 2019}{Jan 2022}{Software Engineer | Machine Learning and Data Platform}{Borealis AI | RBC}{Waterloo, ON, Canada}{assets/logo-rbc.png}
+            {Designed and implemented an ETL and reverse ETL-based data access platform, simplifying data retrieval to a single API call for Spark DataFrames in Parquet format on S3, reducing access time from hours to seconds. 
+            
+            Deployed Delta Lake on an on-premises cluster to optimize performance, and packaged it into a Python solution for ML teams. Led the design, versioning, and release management of the platform, ensuring efficient data access and improved user experience.
+Spearheaded the creation of a data access platform that enabled faster ML pipeline onboarding and real-time integration of synthetic and real credit card data. This solution reduced onboarding time from weeks to days and improved time-series data retrieval through Delta Lake, cutting access time from hours to seconds.
+            
+            %Designed and implemented an ETL and reverse ETL-based data access platform, enabling seamless integration into Feature Stores. Streamlined the data access process to a single API call, significantly reducing retrieval time to just a few seconds for Spark DataFrames stored in optimized Parquet tables on S3. This solution addressed a major bottleneck, as accessing data from RBC previously required hours to query a Teradata source.
+
+%Gathered data access requirements from ML teams and deployed Delta Lake onto an on-premises cluster to optimize data retrieval performance. Developed and packaged Delta Lake into a Python solution tailored to meet the specific needs of each team. Led the design, versioning, and release management of the package, ensuring seamless data access and a positive user experience for ML teams.
+
+%Led the vision, design, and implementation of a data access platform to support the data needs of multiple teams. Collaborated with teams to facilitate the building of ML pipelines by initially generating synthetic data and subsequently integrating real credit card data into these pipelines via the data access platform. This solution significantly reduced the ML pipeline onboarding time from weeks to days and improved access to time-series data, reducing retrieval times from hours to seconds through the utilization of Delta Lake.
+
+%Responsible for vision and roadmap of a data access platform. On boarded 5-6 projects to use Data Access Platform. Data Accessing efforts of all these projects were brought down to a few commands and minutes in processing from hours and days of processing and lots of lines of code to write until researchers get to see the data.
+}
+            \vspace{\itemspace}\\
+            % PRONAVIGATOR
+            \cvevent{Aug 2018}{Jul 2019}{Software Engineer | Machine Learning Engineer}{Pronavigator}{Kitchener, ON, Canada}{assets/logo-pronav.png}
+            {Designed and implemented a Neural Network-based Natural Language Understanding (NLU) engine for Pronav, addressing the performance limitations of the existing SVM-based engine. The new NLU engine resulted in significant cost savings, reducing server expenses by thousands of dollars per month, and improved request response times by a factor of 100.
+
+Developed an accuracy evaluation tool using the Confusion Matrix technique, specifically tailored for text classification, which identified critical issues within the data cleaning process of Pronav’s NLU engine.
+
+Revised and documented the data cleaning process, providing Data Analysts with a framework to evaluate data from the NLU engine’s perspective prior to labeling. This refinement led to a 10-15% improvement in accuracy, as the more context-driven approach enabled more accurate labeling based on the confusion matrix data.
+
+}
+          %  \vspace{\itemspace}\\
+            % MENTOR SEIMENS
+        %    \cvevent{Oct 2013}{Apr 2016}{Software Engineer | Embedded Systems}{Mentor @ Siemens}{Willsonville, OR, USA}{assets/logo-mentor.jpeg}
+          %  {Improved visualization of processes on a multi-core architecture in RTOS by implementing a feature called Kernel Awareness. Kernel Awareness connected the core information of a process to pre-defined UI. Through this UI of Kernel Awareness, developers could clearly see state, memory utilization, affinity etc of each process which is critical in an RTOS.
+
+%Experienced developing different device drivers for Nucleus RTOS. (I2C, SPI, LCD, CAN etc drivers for ARM \& PPC Architectures)}
+            \vspace{\itemspace}
+            \fbox{
+                Work experience prior to 2019 is visible on \href{https://www.linkedin.com/in/shahwar-saleem-050ba93a}{\faLinkedinSquare \ \textbf{LinkedIn}}.
+            }%\fbox
+            \vspace{0.2cm}\\
+        \end{rightcolumn}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       LEFT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %\begin{leftcolumn*}\noindent \footnotesize
+        %{\color{white}
+            %-------------------------------------------------------------
+            %                       TECH
+            %-------------------------------------------------------------
+         %   \heading{\faWrench}{Tech}
+          %  \begin{minipage}[c]{\leftcolwidth}
+           %     \begin{tabular}{r|l}
+            %        Python & \pictofraction{4}\\[0.3em]
+             %       Git & \pictofraction{4}\\[0.3em]
+              %      Databricks & \pictofraction{4}\\[0.3em]
+              %      CICD & \pictofraction{4}\\[0.3em]
+              %      Spark & \pictofraction{3}\\[0.3em]
+              %      AWS & \pictofraction{3}\\[0.3em]
+               %     Flyte & \pictofraction{3}\\[0.3em]
+               %     Kubernetes & \pictofraction{3}\\[0.3em]
+               %     Kubeflow & \pictofraction{2}\\[0.3em]
+               %     Golang & \pictofraction{1}
+               % \end{tabular}
+            %\end{minipage}
+        %}
+        %\end{leftcolumn*}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{rightcolumn}\noindent \small
+            %-------------------------------------------------------------
+            %                       STRENGTHS
+            %-------------------------------------------------------------
+            \hspace{-2.4pt}\heading{\faHeartbeat}{Interests \& Expertise}
+            \fbox{
+                \begin{minipage}[r]{0.84\rightcolwidth}
+                    \cvkeyword{ML Platforms}
+                    \cvkeyword{Data Platforms}
+                    \cvkeyword{Data Management}
+                    \cvkeyword{Software System Design}
+                    \cvkeyword{Machine Learning Engineering}
+                    \cvkeyword{ML in Prod}
+                    \cvkeyword{Feature Stores}\\
+                    \cvkeyword{Travelling}
+                    \cvkeyword{Snooker}
+                    \cvkeyword{Food}
+                \end{minipage}
+            }%\fbox
+        \end{rightcolumn}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       PAGE 2
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \newpage
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       LEFT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{leftcolumn*} \noindent \footnotesize
+        {\color{white}
+            %-------------------------------------------------------------
+            %                       LANGUAGES
+            %-------------------------------------------------------------
+            \phantom{} \\ % To leave a margin with the top of the page
+            \heading{\faGlobe}{Languages}
+            \begin{minipage}[r]{\leftcolwidth}
+                \begin{tabular}{r|l}
+                    English & Working knowledge\\[0.3em]
+                    Urdu & Mother tongue\\[0.3em]
+                \end{tabular}
+            \end{minipage}
+            \vspace{\sectionspace}
+        }
+        \end{leftcolumn*}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{rightcolumn}\noindent \small
+            %-------------------------------------------------------------
+            %                     FORMAL-EDUCATION
+            %-------------------------------------------------------------
+            \phantom{} \\ % To leave a margin with the top of the page
+            \heading{\faGraduationCap}{Formal Education}
+            % UNIVERSITY OF WATERLOO
+            \cvevent{2016}{2018}{MEng | Computer Science}{University of Waterloo}{Waterloo, ON, Canada}{assets/logo-uwaterloo.png}
+            {As a Graduate Research Assistant at Autonomous Vehicles Lab, I designed the build system of ROS components deployed onto the car. Ported ROS to QNX over ARM architecture released just for the vehicle. 
+            
+            Course work involved learning about Machine Learning and rigorous Mathematics that goes into building different models. Polished my Software Architecture skills along the way.}
+            \vspace{\itemspace}\\
+            % ETHZ
+            \cvevent{2009}{2013}{Electrical and Computer Engineering}{UET}{Lahore, Pakistan}{assets/logo-uet.png}
+            {An Electrical Engineering Degree with Computer Sciences lead me to understand how computers are build from scratch. It gave me the ability to visualize what exactly is happening at hardware level when we write a piece of code. 
+            Developing a Beowulf Cluster customized for compute loads was an ideal outcome of this learning journey.}
+        \vspace{\sectionspace}
+        \end{rightcolumn}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       LEFT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{leftcolumn*}\noindent \footnotesize
+        {\color{white}
+            %-------------------------------------------------------------
+            %                       PHILOSOPHY
+            %-------------------------------------------------------------
+            \heading{\faQuoteLeft}{Philosophy}
+            \fbox{
+                \begin{minipage}[l]{0.9\leftcolwidth}
+                    Here are some thoughts that guide my\\
+                    actions as an engineer.\\[1em]
+                    \simplequote{Success is a few simple disciplines, practiced every day; while failure is simply a few errors in judgment, repeated every day.}{Jim Rohn}
+                    \vspace{\itemspace}\\
+                    \simplequote{With most subjects, it is more important to really understand the basic material than have exposure to more advanced concepts.}{S. S. Skiena}
+                    \vspace{\itemspace}\\
+                    \simplequote{The people that really create the things that change this industry are both the thinker and doer in one person. [...] It’s very easy to say "I thought of this three years ago". But usually when you dig a little deeper, you find that the people that really did it were also the people that really worked through the hard intellectual problems as well.}{Steve Jobs}
+                    \vspace{\itemspace}\\
+                    \simplequote{It is not that I'm so smart. But I stay with the questions much longer.}{Albert Einstien}
+                \end{minipage}
+            }%\fbox
+        } % \color{white}
+        \end{leftcolumn*}
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        %                       RIGHT COLUMN
+        %-------------------------------------------------------------
+        %-------------------------------------------------------------
+        \begin{rightcolumn}\noindent \small
+            %-------------------------------------------------------------
+            %                       SELF-EDUCATION
+            %-------------------------------------------------------------
+            \hspace{-2.4pt}\heading{\faTv}{Self-Education}
+            % DATA ENGINEERING
+            % Usage: \onlinecourse{1:date}{2:course title}{3:organisation-name}{4:organisation-logo}{5:text}{6:certificates/results}
+            \onlinecourse{Jul 2021}{Data Engineering Nano Degree}{Udacity}{assets/logo-udacity.png}
+            {Rigorous dive into developing Data Pipelines and important steps involved to make data whisper. Hands on practice with projects.}
+            {Results: \href{https://confirm.udacity.com/UTWXK4NQ}{\textbf{Statement of Accomplishment}}.
+            }\\
+            \vspace{\itemspace}\\
+            % NVIDIA
+            % Usage: \onlinecourse{1:date}{2:course title}{3:organisation-name}{4:organisation-logo}{5:text}{6:certificates/results}
+            \onlinecourse{Jul 2021}{Accelerating Data Engineering Pipelines}{NVIDIA}{assets/logo-nvidia.jpeg}
+            {Learned to accelerate Data Pipelines with the use of GPU by employing Cuda version of different libraries like cudf}
+            {Results: \href{https://courses.nvidia.com/certificates/8a411f544ec843c685e9c53de9135326/}{\textbf{Statement of Accomplishment}}.}\\
+            \vspace{\itemspace}\\
+            % Coursera
+            % Usage: \onlinecourse{1:date}{2:course title}{3:organisation-name}{4:organisation-logo}{5:text}{6:certificates/results}
+            \onlinecourse{Aug 2018}{Deep Learning Specialization}{DeepLearning.ai via Coursera}{assets/logo-deeplearning.jpeg}
+            {Learned about Deep Learning and Neural Networks from scratch upto an abstraction level of CNNs and RNNs.}
+            {Course Results: \href{https://www.coursera.org/account/accomplishments/verify/JN2QE943XXQG}{\textbf{Neural Networks and Deep Learning}},  \href{https://www.coursera.org/account/accomplishments/verify/PN2EUS7KKZVS}{\textbf{Improving Deep NNs}}, \href{https://www.coursera.org/account/accomplishments/verify/UL9YMW7FWWF7}{\textbf{ML Project Structure}}, \href{https://www.coursera.org/account/accomplishments/verify/7YUGNR4CRE36}{\textbf{Convolutional NNs}} .}
+
+            %-------------------------------------------------------------
+            %                       PUBLICATIONS
+            %-------------------------------------------------------------
+            \vspace{\sectionspace}
+            \heading{\faBook}{Publications}
+            % Usage: \publication{1:date}{2:title}{3:publisher}{4:publisher-logo}{5:text}
+            \publication{June 2018}{An Automated Vehicle Safety Concept Based on Runtime Restriction of the Operational Design Domain}{IEEE Intelligent Vehicle Symposium}{assets/logo-ieee.png}
+            {Designed and implemented a strategy to alert the autonomous vehicle when a camera is obstructed. This was done using Deep Neural Networks and using ROS for vehicles.}
+
+            %-------------------------------------------------------------
+            %                       REFERENCES
+            %-------------------------------------------------------------
+            \vspace{\sectionspace}
+            \heading{\faVolumeControlPhone}{References}
+            \begin{minipage}[r]{\rightcolwidth}
+                \fbox{My references are available upon request. Among others, they include:}\\
+                \simplerow{Managers}{Khaled Ammar (ex-Google), Amir Abdi (Microsoft), George Long (ex-RBC)}
+                \vspace{4pt}\\
+                \simplerow{Reports}{Nada Saiyed}
+            \end{minipage}
+        \end{rightcolumn}
+        \vspace{20em}
+    \end{paracol}
+\end{document}

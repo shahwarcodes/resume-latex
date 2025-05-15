@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[margin, 10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+%\usepackage{helvet} % Default font is the helvetica postscript font
+\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+\usepackage{paralist}
+\setlength{\textwidth}{5.1in} % Text width of the document
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\moveleft\hoffset\leftline{\large\bf Muhammad Umar Farooqi} % Your name at the top
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt} % Horizontal line after name; adjust line thickness by changing the '1pt'
+ 
+\moveleft\hoffset\leftline{570 Highpoint Ave. Waterloo, ON Canada \hspace{0.3cm}\begin{inparaitem} \itemsep -2pt % Reduce space between items
+\item Email: umar.farooqi@uwaterloo.ca
+\item Tel: (226) 220-2167
+\end{inparaitem}}
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{EDUCATION}
+
+{\sl Master of Science,} Computer Engineering \hfill Sep-2015 - Present \\
+University of Waterloo \hfill Waterloo, Canada \\
+Concentration: Computer Software
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Percentage: 85\% 
+\end{itemize}
+
+{\sl Bachelor of Science,} Computer Engineering \hfill Sep-2009 - June-2013 \\
+University of Engineering and Technology \hfill Lahore, Pakistan
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item GPA: 3.45/4.0
+\item Advisor: Dr. Atif Alvi (Cambridge University) 
+\item Thesis: Load Balancing of Computationally Intensive Algorithms using Beowulf Cluster
+\end{itemize}
+ 
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{COMPUTER \\ SKILLS} 
+
+{\sl Languages \& Software:} 
+C, C++, Python, PHP, Web2py, Flask, JavaScript, HTML, jQuery, CSS, SASS, Docker, Ansible, MySQL, Bash Scripting, Assembly Language, Embedded Linux\\
+{\sl Operating Systems:} Linux, OS X 
+ 
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+ 
+\section{EXPERIENCE}
+
+{\sl Software Engineer} \hfill July-2015 - Present \\
+GetTalent \hfill San Jose, CA
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed resume parsing service using burning glass in Web2py
+\item Developed OAuth2.0 based authentication API in Flask 
+\item Replaced old deployment process with Docker, Ansible and CircleCI
+\item Wrote APIs for talent-pipelines and pools using Amazon CloudSearch
+\item Added support for User-scoped roles in already existing user management system
+\end{itemize}
+ 
+{\sl Front-End Developer} \hfill Sep-2014 - Aug-2015 \\
+TenMarks Education Inc - An Amazon company \hfill Lahore, Pakistan
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed Marketing pages for TenMarks in Bootstrap and HTML
+\item Developed Front-End for Teacher Assessments in Backbone.Js
+\item Migrated whole website from Bootstrap2 to Bootstrap3
+\end{itemize} 
+
+{\sl Software Engineer} \hfill Aug-2013 - Aug-2014 \\
+QC Technologies \hfill Lahore, Pakistan
+\begin{itemize}  \itemsep -2pt % Reduce space between items
+\item Developed a web grader tool like Hubspot in Python/Django
+\item Revamped the Front-End of Energy management website in Bootstrap and Backbone.Js
+\end{itemize} 
+
+{\sl Embedded Software Development Intern} \hfill Jun-2012 - Aug-2013 \\
+Mentor Graphics \hfill Lahore, Pakistan
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Studied about different RTOS especially Nucleus and Embedded Linux. 
+\item Worked on different build systems like Open-embedded, MEL and Yocto.
+\item Built a demo application for Nucleus.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+\section{GRADUATE PROJECTS}
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Predicting the Rating of Yelp Text Reviews using Yelp Dataset
+\item Facial Expressions Recognition using SVMs
+\item Performance evaluation of R using Datamill
+\end{itemize}
+
+\section{AWARDS} 
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Graduate Research Studentship - University of Waterloo - 2015
+\item International Master's Student Award - University of Waterloo - 2015
+\item National Talent Scholarship from Government of Pakistan (2007-09)
+\item Presidential Award - 2003 (On performing national song in front of President of Pakistan)
+\end{itemize}
+
+
+\end{resume}
+\end{document}
